@@ -1,0 +1,31 @@
+PASSOS PARA IMPLANTAR NO VERCEL:
+
+1. NO PAINEL VERCEL:
+   - Vá para: https://vercel.com/dashboard
+   - Encontre o projeto "q9-tecnologies"
+   - Clique no projeto
+
+2. CONECTAR REPOSITÓRIO:
+   - Clique em "Connect Git Repository"
+   - Selecione GitHub
+   - Escolha: jki56/Q9-TECNOLOGIES
+   - Clique em "Import"
+
+3. CONFIGURAR DEPLOY:
+   - Project Name: q9-tecnologies
+   - Framework Preset: Other
+   - Root Directory: ./
+   - Build Command: (deixe vazio)
+   - Output Directory: ./
+   - Install Command: (deixe vazio)
+
+4. VARIÁVEIS DE AMBIENTE (opcional):
+   - Pule esta etapa por enquanto
+
+5. DEPLOY:
+   - Clique em "Deploy"
+   - Aguarde 1-2 minutos
+
+RESULTADO:
+✅ Site online em: https://q9-tecnologies.vercel.app
+✅ Deploy automático a cada push no GitHub

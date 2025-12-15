@@ -1,0 +1,25 @@
+COMANDOS PARA FAZER PUSH:
+
+1. Configure seu email:
+git config user.email "seu-email@gmail.com"
+
+2. Faça o push (vai pedir suas credenciais):
+git push -u origin main
+
+Quando pedir:
+- Username: jki56
+- Password: [seu token de acesso pessoal do GitHub]
+
+DEPOIS DO PUSH BEM-SUCEDIDO:
+
+3. Vá para Vercel.com
+4. Clique em "New Project"
+5. Conecte com GitHub
+6. Selecione "Q9-TECNOLOGIES"
+7. Configure:
+   - Framework: Other
+   - Build Command: (vazio)
+   - Output Directory: ./
+8. Deploy!
+
+Seu site ficará em: https://q9-tecnologies.vercel.app

@@ -1,0 +1,29 @@
+PASSOS PARA SUBIR NO GITHUB E CONECTAR COM VERCEL:
+
+OPÇÃO 1 - INTERFACE WEB GITHUB:
+1. Vá para: https://github.com/jki56/Q9-TECNOLOGIES
+2. Clique em "uploading an existing file"
+3. Arraste TODOS os arquivos da pasta "ONLY TECH"
+4. Commit: "Upload complete website files"
+
+OPÇÃO 2 - GITHUB DESKTOP:
+1. Baixe GitHub Desktop
+2. Clone o repositório Q9-TECNOLOGIES
+3. Copie todos os arquivos para a pasta clonada
+4. Commit e Push
+
+DEPOIS NO VERCEL:
+1. https://vercel.com → New Project
+2. Import Git Repository
+3. Selecione: jki56/Q9-TECNOLOGIES
+4. Framework: Other
+5. Deploy!
+
+ARQUIVOS PRINCIPAIS:
+✅ index.html (página principal)
+✅ vercel.json (config Vercel)
+✅ components/ (componentes)
+✅ animations.css (animações)
+✅ mobile-optimizations.css (mobile)
+
+URL FINAL: https://q9-tecnologies.vercel.app

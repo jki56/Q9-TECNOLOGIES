@@ -1,0 +1,36 @@
+INSTRUÇÕES PARA DEPLOY NO VERCEL:
+
+1. CRIAR REPOSITÓRIO NO GITHUB:
+   - Acesse: https://github.com
+   - Clique em "New repository"
+   - Nome: q9-tecnologies
+   - Deixe público
+   - NÃO marque "Initialize with README"
+
+2. CONECTAR REPOSITÓRIO (execute estes comandos):
+   git remote add origin https://github.com/SEU_USUARIO/q9-tecnologies.git
+   git push -u origin main
+
+3. DEPLOY NO VERCEL:
+   - Acesse: https://vercel.com
+   - Clique em "New Project"
+   - Conecte com GitHub
+   - Selecione o repositório "q9-tecnologies"
+   - Configure:
+     * Framework Preset: Other
+     * Root Directory: ./
+     * Build Command: (deixe vazio)
+     * Output Directory: ./
+   - Clique em "Deploy"
+
+4. CONFIGURAR DOMÍNIO (opcional):
+   - No painel do Vercel, vá em "Settings" > "Domains"
+   - Adicione seu domínio personalizado
+
+ARQUIVOS PRONTOS PARA DEPLOY:
+✅ index.html (arquivo principal)
+✅ vercel.json (configuração do Vercel)
+✅ README.md (documentação)
+✅ Todos os assets e componentes
+
+O site está otimizado para mobile e desktop!

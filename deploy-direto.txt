@@ -1,0 +1,20 @@
+DEPLOY DIRETO NO VERCEL (SEM GITHUB):
+
+1. Acesse: https://vercel.com
+2. Faça login/cadastro
+3. Clique em "New Project"
+4. Arraste a pasta "ONLY TECH" para o Vercel
+5. Configure:
+   - Project Name: q9-tecnologies
+   - Framework: Other
+   - Root Directory: ./
+6. Clique em "Deploy"
+
+PRONTO! Seu site estará online em poucos minutos.
+
+ALTERNATIVA - NETLIFY:
+1. Acesse: https://netlify.com
+2. Arraste a pasta para o site
+3. Deploy automático
+
+Ambos funcionam sem precisar de GitHub ou tokens!
