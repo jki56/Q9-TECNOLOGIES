@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="pt-AO" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civetch Angola — Engenharia e construção de excelência</title>
+    <meta name="description" content="Projetos residenciais, comerciais e industriais entregues com precisão, segurança e tempo.">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Civetch Angola">
+    <meta property="og:description" content="Engenharia e construção de excelência">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://civetch.ao">
+    <meta property="og:image" content="https://static.photos/construction/1200x630/10">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS & JS Imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B2340',
+                        secondary: '#10B981',
+                        light: '#F4F6F8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light font-sans antialiased overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-primary z-50 flex flex-col items-center justify-center">
+        <div class="animate-pulse">
+            <svg class="w-24 h-24 text-secondary" viewBox="0 0 100 100">
+                <path d="M50 10L90 30V70L50 90L10 70V30L50 10Z" stroke="currentColor" stroke-width="5" fill="none" stroke-dasharray="280" stroke-dashoffset="280" id="logo-path"/>
+            </svg>
+        </div>
+        <div class="w-64 h-1 bg-gray-700 mt-8 rounded-full overflow-hidden">
+            <div id="progress-bar" class="h-full bg-secondary" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <custom-header></custom-header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center overflow-hidden hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/95 z-10"></div>
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+        </div>
+        
+        <!-- Floating geometric elements - optimized -->
+        <div class="absolute bottom-32 right-32 w-20 h-20 bg-secondary/10 rounded-lg floating-element hidden xl:block"></div>
+<div class="container mx-auto px-6 relative z-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl" id="hero-content">
+                    <div class="mb-4">
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white font-heading mb-6 leading-tight">
+                        CIVETCH
+                        <span class="block text-secondary">ANGOLA</span>
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8 opacity-0 leading-relaxed" id="hero-subtitle">
+                        Transformamos sonhos em realidade através da engenharia de precisão e construção sustentável
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 opacity-0" id="hero-ctas">
+                        <a href="#contact" class="btn-primary bg-secondary hover:bg-secondary/90 text-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-center">
+                            <i data-feather="phone" class="inline w-5 h-5 mr-2"></i>
+                            SOLICITAR ORÇAMENTO
+                        </a>
+                        <a href="#projects" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-center">
+                            <i data-feather="eye" class="inline w-5 h-5 mr-2"></i>
+                            VER PROJETOS
+                        </a>
+                    </div>
+                    
+                    <!-- Quick stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12 opacity-0" id="hero-stats">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary">15+</div>
+                            <div class="text-white/70 text-sm">Anos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary">87+</div>
+                            <div class="text-white/70 text-sm">Projetos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary">52+</div>
+                            <div class="text-white/70 text-sm">Clientes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Gallery -->
+                <div class="hidden lg:block relative">
+                    <div class="grid grid-cols-2 gap-4 opacity-0" id="hero-gallery">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Edifício Moderno" class="rounded-xl shadow-2xl image-overlay">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Construção" class="rounded-xl shadow-2xl image-overlay">
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Arquitetura" class="rounded-xl shadow-2xl image-overlay">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Obra" class="rounded-xl shadow-2xl image-overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="inline-block animate-pulse">
+                <div class="flex flex-col items-center">
+                    <span class="text-white text-sm mb-1">SAIBA MAIS</span>
+                    <i data-feather="chevron-down" class="text-white w-6 h-6"></i>
+                </div>
+            </a>
+        </div>
+</section>
+
+    <!-- Credentials Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-heading text-primary">Nossas Credenciais</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 mb-16">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2" id="years-counter">0</div>
+                    <div class="text-gray-600">Anos de Experiência</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2" id="projects-counter">0</div>
+                    <div class="text-gray-600">Projetos Concluídos</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2" id="clients-counter">0</div>
+                    <div class="text-gray-600">Clientes Satisfeitos</div>
+                </div>
+            </div>
+            
+            <!-- Certifications and Partnerships -->
+            <div class="mt-16">
+                <h3 class="text-xl font-semibold text-center mb-8 text-primary">Certificações e Parcerias</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="ISO 9001" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">ISO 9001</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="OHSAS 18001" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">OHSAS 18001</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Ministério Obras Públicas" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">Min. Obras Públicas</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Ordem dos Engenheiros" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">Ordem Engenheiros</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Câmara Comércio" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">Câmara Comércio</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="AICEP" class="h-12 w-12 object-contain mb-2">
+                        <span class="text-xs text-gray-600 text-center">AICEP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full translate-y-32 -translate-x-32"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">🛠️ Nossos Serviços</span>
+                <h2 class="text-4xl font-bold mb-4 font-heading text-primary">Soluções Completas em Construção</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Da concepção à entrega, oferecemos serviços integrados para transformar suas ideias em realidade</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Construção Civil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-secondary p-3 rounded-full">
+                                <i data-feather="home" class="w-6 h-6 text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Construção Civil</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Projetos residenciais, comerciais e industriais executados com os mais altos padrões de qualidade e segurança.</p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>• Edifícios residenciais</li>
+                            <li>• Complexos comerciais</li>
+                            <li>• Infraestruturas industriais</li>
+                        </ul>
+                        <a href="#" class="text-secondary font-medium inline-flex items-center group/link hover:text-secondary/80">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Engenharia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-secondary p-3 rounded-full">
+                                <i data-feather="settings" class="w-6 h-6 text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Engenharia</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Soluções técnicas inovadoras e eficientes para os desafios mais complexos da construção moderna.</p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>• Engenharia estrutural</li>
+                            <li>• Projetos elétricos e hidráulicos</li>
+                            <li>• Estudos de viabilidade</li>
+                        </ul>
+                        <a href="#" class="text-secondary font-medium inline-flex items-center group/link hover:text-secondary/80">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Consultoria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-secondary p-3 rounded-full">
+                                <i data-feather="users" class="w-6 h-6 text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Consultoria</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Orientação especializada desde o planeamento inicial até à execução final do projeto.</p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>• Planeamento estratégico</li>
+                            <li>• Gestão de projetos</li>
+                            <li>• Controlo de qualidade</li>
+                        </ul>
+                        <a href="#" class="text-secondary font-medium inline-flex items-center group/link hover:text-secondary/80">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Services Banner -->
+            <div class="mt-16 bg-gradient-to-r from-primary to-primary/90 rounded-2xl p-8 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div class="relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Precisa de um serviço personalizado?</h3>
+                            <p class="text-white/90 mb-6">Oferecemos soluções sob medida para atender às necessidades específicas do seu projeto.</p>
+                            <a href="#contact" class="bg-secondary hover:bg-secondary/90 text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center">
+                                <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+                                Falar Connosco
+                            </a>
+                        </div>
+                        <div class="hidden md:block">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Equipa" class="rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6 font-heading text-primary">Projetos Recentes</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Descubra nossos projetos emblemáticos que refletem nossa excelência em engenharia e construção.</p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="all">
+                        Todos
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="residential">
+                        Residencial
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="commercial">
+                        Comercial
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="industrial">
+                        Industrial
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Residential Projects -->
+                <div class="project-item residential group cursor-pointer" data-category="residential">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vila Moderna" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Vila Moderna Talatona</h4>
+                            <p class="text-sm text-white/80">Residencial • 2023</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Residencial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item commercial group cursor-pointer" data-category="commercial">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Centro Comercial" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Centro Comercial Belas</h4>
+                            <p class="text-sm text-white/80">Comercial • 2022</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">Comercial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item industrial group cursor-pointer" data-category="industrial">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Complexo Industrial" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Complexo Industrial Viana</h4>
+                            <p class="text-sm text-white/80">Industrial • 2023</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">Industrial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item residential group cursor-pointer" data-category="residential">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Condomínio" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Condomínio Kilamba</h4>
+                            <p class="text-sm text-white/80">Residencial • 2022</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Residencial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item commercial group cursor-pointer" data-category="commercial">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Escritórios" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Torre de Escritórios</h4>
+                            <p class="text-sm text-white/80">Comercial • 2023</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">Comercial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item residential group cursor-pointer" data-category="residential">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Moradia Luxo" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Moradia de Luxo Miramar</h4>
+                            <p class="text-sm text-white/80">Residencial • 2023</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Residencial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button -->
+            <div class="text-center mt-12">
+                <a href="#" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center">
+                    <i data-feather="grid" class="w-5 h-5 mr-2"></i>
+                    Ver Todos os Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-heading">Nosso Processo</h2>
+            
+            <div class="relative">
+                <div class="absolute left-1/2 h-full w-1 bg-secondary/20 -translate-x-1/2 hidden md:block"></div>
+                
+                <div class="space-y-8 md:space-y-16">
+                    <div class="flex flex-col md:flex-row items-center md:even:flex-row-reverse timeline-item opacity-0">
+                        <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                                <h3 class="text-xl font-bold mb-2 text-secondary">1. Consulta Inicial</h3>
+                                <p>Entendemos suas necessidades, objetivos e requisitos específicos.</p>
+                            </div>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto md:mx-0 relative">
+                            <span class="text-primary font-bold text-xl">1</span>
+                        </div>
+                        <div class="w-full md:w-1/2 px-4">
+                            <img src="https://static.photos/office/640x360/1" alt="Consulta" class="rounded-lg shadow-xl w-full">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center md:even:flex-row-reverse timeline-item opacity-0">
+                        <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                                <h3 class="text-xl font-bold mb-2 text-secondary">2. Planeamento</h3>
+                                <p>Desenvolvemos estratégias detalhadas e soluções personalizadas.</p>
+                            </div>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto md:mx-0 relative">
+                            <span class="text-primary font-bold text-xl">2</span>
+                        </div>
+                        <div class="w-full md:w-1/2 px-4">
+                            <img src="https://static.photos/workspace/640x360/2" alt="Planeamento" class="rounded-lg shadow-xl w-full">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center md:even:flex-row-reverse timeline-item opacity-0">
+                        <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                                <h3 class="text-xl font-bold mb-2 text-secondary">3. Execução</h3>
+                                <p>Implementação com rigor técnico, segurança e gestão de qualidade.</p>
+                            </div>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto md:mx-0 relative">
+                            <span class="text-primary font-bold text-xl">3</span>
+                        </div>
+                        <div class="w-full md:w-1/2 px-4">
+                            <img src="https://static.photos/construction/640x360/3" alt="Execução" class="rounded-lg shadow-xl w-full">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center md:even:flex-row-reverse timeline-item opacity-0">
+                        <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                                <h3 class="text-xl font-bold mb-2 text-secondary">4. Entrega</h3>
+                                <p>Conclusão do projeto com garantia de satisfação e suporte pós-entrega.</p>
+                            </div>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto md:mx-0 relative">
+                            <span class="text-primary font-bold text-xl">4</span>
+                        </div>
+                        <div class="w-full md:w-1/2 px-4">
+                            <img src="https://static.photos/real%20estate/640x360/4" alt="Entrega" class="rounded-lg shadow-xl w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary/90 text-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 -translate-x-48"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/20 rounded-full translate-y-32 translate-x-32"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">💬 Depoimentos</span>
+                <h2 class="text-4xl font-bold mb-4 font-heading">O Que Dizem Nossos Clientes</h2>
+                <p class="text-white/80 max-w-2xl mx-auto">A satisfação dos nossos clientes é a nossa maior conquista</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">João Silva</h4>
+                            <p class="text-white/70 text-sm">Diretor Executivo</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                    </div>
+                    <p class="text-white/90 italic leading-relaxed">
+                        "A Civetch superou todas as nossas expectativas. Profissionalismo, qualidade e pontualidade em cada etapa do projeto."
+                    </p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Maria Santos</h4>
+                            <p class="text-white/70 text-sm">Proprietária</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                    </div>
+                    <p class="text-white/90 italic leading-relaxed">
+                        "Construíram a casa dos meus sonhos. Atenção aos detalhes e acabamentos de primeira qualidade. Recomendo!"
+                    </p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Carlos Mendes</h4>
+                            <p class="text-white/70 text-sm">Gestor de Projetos</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 text-secondary fill-current"></i>
+                    </div>
+                    <p class="text-white/90 italic leading-relaxed">
+                        "Parceria de excelência! Entregaram o complexo comercial no prazo e dentro do orçamento. Equipa muito competente."
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-secondary mb-2">98%</div>
+                    <div class="text-white/80">Satisfação</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-secondary mb-2">100%</div>
+                    <div class="text-white/80">No Prazo</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-secondary mb-2">24h</div>
+                    <div class="text-white/80">Suporte</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-secondary mb-2">5★</div>
+                    <div class="text-white/80">Avaliação</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6 font-heading text-primary">Nossa Equipa</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Profissionais qualificados comprometidos com a excelência em cada projeto.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://static.photos/people/640x360/1" alt="Team Member" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Eng. João Miguel</h3>
+                                <p class="text-secondary">Diretor Executivo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://static.photos/people/640x360/2" alt="Team Member" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Arq. Maria Santos</h3>
+                                <p class="text-secondary">Chefe de Projetos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://static.photos/people/640x360/3" alt="Team Member" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Eng. Carlos Fernandes</h3>
+                                <p class="text-secondary">Supervisor de Obras</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://static.photos/people/640x360/4" alt="Team Member" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold">Téc. Ana Pereira</h3>
+                                <p class="text-secondary">Coordenadora de Qualidade</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-secondary transition-colors">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">❓ Perguntas Frequentes</span>
+                <h2 class="text-4xl font-bold mb-4 font-heading text-primary">Esclareça as Suas Dúvidas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Respostas às perguntas mais comuns sobre nossos serviços e processos</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Quanto tempo demora um projeto de construção?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>O tempo varia conforme a complexidade e tamanho do projeto. Projetos residenciais podem levar de 6 a 18 meses, enquanto projetos comerciais e industriais podem demorar de 12 a 36 meses. Fornecemos um cronograma detalhado durante a fase de planeamento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Oferecem garantia nos trabalhos realizados?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>Sim, oferecemos garantia de 2 anos para estruturas e 1 ano para acabamentos. Além disso, fornecemos suporte pós-entrega e manutenção preventiva para garantir a durabilidade dos nossos projetos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Como é calculado o orçamento?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>O orçamento é baseado em diversos fatores: área de construção, materiais escolhidos, complexidade do projeto, localização e prazos. Realizamos uma avaliação detalhada e fornecemos um orçamento transparente sem custos ocultos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Trabalham com que tipo de materiais?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>Utilizamos materiais de alta qualidade de fornecedores certificados. Trabalhamos com betão, aço, cerâmica, mármore, madeira e materiais sustentáveis. Adaptamos a escolha dos materiais ao orçamento e preferências do cliente.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Fazem projetos fora de Luanda?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>Sim, atendemos todo o território angolano. Temos experiência em projetos nas principais cidades como Benguela, Huambo, Lubango e outras províncias. Os custos de deslocamento são incluídos no orçamento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-primary">Como acompanhar o progresso da obra?</span>
+                            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 text-gray-600 hidden">
+                            <p>Fornecemos relatórios semanais com fotos e atualizações do progresso. Além disso, o cliente tem acesso a uma plataforma online onde pode acompanhar o cronograma, marcos importantes e comunicação direta com a equipa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact CTA -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-6">Não encontrou a resposta que procurava?</p>
+                    <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center">
+                        <i data-feather="message-circle" class="w-5 h-5 mr-2"></i>
+                        Fale Connosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 font-heading text-primary">Entre em Contacto</h2>
+                    <p class="text-gray-600 mb-8">Estamos prontos para discutir seu projeto e responder a quaisquer perguntas que possa ter.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="map-pin" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Endereço</h3>
+                                <p class="text-gray-600">Rua da Construção, 123, Luanda, Angola</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="phone" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Telefone</h3>
+                                <p class="text-gray-600">+244 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="mail" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Email</h3>
+                                <p class="text-gray-600">info@civetch.ao</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-lg font-medium mb-4 text-primary">Horário de Funcionamento</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Segunda - Sexta</span>
+                                <span class="font-medium">8:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sábado</span>
+                                <span class="font-medium">9:00 - 14:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Domingo</span>
+                                <span class="font-medium">Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form id="contactForm" class="bg-gray-50 p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Assunto</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                                <option value="budget">Pedido de Orçamento</option>
+                                <option value="info">Informação Geral</option>
+                                <option value="careers">Oportunidades de Emprego</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-primary px-6 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center">
+                            <span id="submit-text">Enviar Mensagem</span>
+                            <svg id="submit-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+                        
+                        <div id="form-success" class="mt-4 p-4 bg-green-100 text-green-700 rounded hidden">
+                            Obrigado — seu pedido foi enviado. Responderemos em até 24h úteis.
+                        </div>
+                        
+                        <div id="form-error" class="mt-4 p-4 bg-red-100 text-red-700 rounded hidden">
+                            Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3797033290723!2d13.233342315786264!3d-8.815141393746972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f3d3e8c5f9b5%3A0x5c5e0c9b8c5f9b5!2sLuanda%2C%20Angola!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/244123456789?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Civetch" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-40">
+        <i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="fixed bottom-8 left-8 bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-40">
+        <i data-feather="moon" class="w-6 h-6 hidden dark:block"></i>
+        <i data-feather="sun" class="w-6 h-6 block dark:hidden"></i>
+    </button>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
+                <i data-feather="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+                <div class="space-y-6">
+                    <h3 id="modal-title" class="text-2xl font-bold text-primary"></h3>
+                    <p id="modal-location" class="text-gray-600"></p>
+                    <p id="modal-description" class="text-gray-700"></p>
+                    
+                    <div class="pt-4 border-t border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-2">Detalhes do Projeto</h4>
+                        <ul id="modal-details" class="space-y-2">
+                            <!-- Details will be added here -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="modal-carousel" class="relative overflow-hidden rounded-lg">
+                        <!-- Carousel items will be added here -->
+                    </div>
+                    <div class="flex justify-center mt-4 space-x-2" id="modal-carousel-indicators">
+                        <!-- Indicators will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Preloader animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoPath = document.getElementById('logo-path');
+            const progressBar = document.getElementById('progress-bar');
+            const preloader = document.getElementById('preloader');
+            
+            // Animate logo drawing
+            setTimeout(() => {
+                logoPath.style.strokeDashoffset = 0;
+            }, 300);
+            
+            // Faster progress bar
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 20;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        if (preloader) {
+                            preloader.style.opacity = '0';
+                            setTimeout(() => {
+                                preloader.style.display = 'none';
+                                initAnimations();
+                            }, 200);
+                        }
+                    }, 100);
+                }
+            }, 50);
+            
+            // Initialize counters
+            const yearsCounter = document.getElementById('years-counter');
+            const projectsCounter = document.getElementById('projects-counter');
+            const clientsCounter = document.getElementById('clients-counter');
+            
+            if (yearsCounter && projectsCounter && clientsCounter) {
+                animateCounter(yearsCounter, 0, 15, 2000);
+                animateCounter(projectsCounter, 0, 87, 2000);
+                animateCounter(clientsCounter, 0, 52, 2000);
+            }
+        });
+        
+        function animateCounter(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-AO" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Q9 Technologies — Soluções tecnológicas inovadoras</title>
+    <meta name="description" content="Soluções em TI, desenvolvimento de software e consultoria tecnológica para transformar seu negócio.">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Q9 Technologies">
+    <meta property="og:description" content="Soluções tecnológicas inovadoras">
+<meta property="og:type" content="website">
+    <meta property="og:url" content="https://civetch.ao">
+    <meta property="og:image" content="https://static.photos/construction/1200x630/10">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS & JS Imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="mobile-optimizations.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B2340',
+                        secondary: '#D9A84B',
+                        light: '#F4F6F8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light font-sans antialiased overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-primary z-50 flex flex-col items-center justify-center">
+        <div class="animate-pulse">
+            <svg class="w-24 h-24 text-secondary" viewBox="0 0 100 100">
+                <path d="M50 10L90 30V70L50 90L10 70V30L50 10Z" stroke="currentColor" stroke-width="5" fill="none" stroke-dasharray="280" stroke-dashoffset="280" id="logo-path"/>
+            </svg>
+        </div>
+        <div class="w-64 h-1 bg-gray-700 mt-8 rounded-full overflow-hidden">
+            <div id="progress-bar" class="h-full bg-secondary" style="width: 0%"></div>
+        </div>
+    </div>
+    <!-- Main Header -->
+    <animated-navbar></animated-navbar>
+
+    <!-- Hero Section with Slideshow -->
+<section class="relative h-screen flex items-center overflow-hidden bg-primary">
+        <div class="absolute inset-0 bg-primary/90 z-0"></div>
+        <!-- Fundo Único com Movimento de Câmera -->
+        <div class="absolute inset-0 z-0 opacity-60" id="media-container">
+            <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out" id="camera-bg" style="transform: scale(1.2) translate(0px, 0px); background-image: url('bg.jpg');"></div>
+        </div>
+        
+        <!-- Cursor Fumo -->
+        <div id="smoke-cursor" class="fixed pointer-events-none z-30" style="transform: translate(-50%, -50%);"></div>
+<!-- Header Fixo no Topo -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+            <div class="flex justify-between items-center p-4">
+                <!-- Logo -->
+                <div class="animate-fade-in-left">
+                    <h1 class="text-lg md:text-xl font-bold text-white font-heading">Q9 TECHNOLOGIES</h1>
+                    <p class="text-xs text-secondary opacity-80">ANGOLA</p>
+                </div>
+                
+                <!-- Menu de navegação -->
+                <nav class="hidden md:flex space-x-8 animate-fade-in-right">
+                    <a href="#about" class="text-white hover:text-secondary transition-all duration-300 transform hover:scale-110">Sobre</a>
+                    <a href="#services" class="text-white hover:text-secondary transition-all duration-300 transform hover:scale-110">Serviços</a>
+                    <a href="#projects" class="text-white hover:text-secondary transition-all duration-300 transform hover:scale-110">Projectos</a>
+                    <a href="#contact" class="text-white hover:text-secondary transition-all duration-300 transform hover:scale-110">Contato</a>
+                </nav>
+                
+                <!-- Menu mobile -->
+                <button class="md:hidden text-white animate-fade-in-right" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl" id="hero-content">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 opacity-0 animate-slide-up-delay" id="dynamic-title">Inovação Digital</h2>
+                <p class="text-xl text-white/90 mb-8 opacity-0 animate-fade-in-delay" id="hero-subtitle">Transformamos o Futuro com Tecnologia</p>
+<div class="flex space-x-4 opacity-0 animate-bounce-in-delay" id="hero-ctas">
+                    <a href="#contact" class="bg-secondary hover:bg-secondary/90 text-primary px-8 py-3 rounded font-medium transition-all duration-500 transform hover:scale-105 hover:shadow-xl">FALE CONOSCO</a>
+                    <a href="#projects" class="border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded font-medium transition-all duration-500 transform hover:scale-105 hover:shadow-xl">NOSSOS PROJETOS</a>
+</div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="inline-block animate-pulse">
+                <div class="flex flex-col items-center">
+                    <span class="text-white text-sm mb-1">SAIBA MAIS</span>
+                    <i data-feather="chevron-down" class="text-white w-6 h-6"></i>
+                </div>
+            </a>
+        </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-heading text-primary">Sobre Nós</h2>
+            
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <p class="text-lg text-gray-700 mb-8">A Q9 Technologies é uma empresa angolana especializada em soluções tecnológicas inovadoras. Desenvolvemos websites profissionais, aplicativos mobile e sistemas de inteligência artificial para WhatsApp Business.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <i data-feather="target" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Nossa Missão</h3>
+                        <p class="text-gray-600">Transformar negócios através da tecnologia, oferecendo soluções digitais que impulsionam o crescimento e a inovação.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <i data-feather="eye" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Nossa Visão</h3>
+                        <p class="text-gray-600">Ser a referência em tecnologia em Angola, conectando empresas ao futuro digital com excelência e inovação.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <i data-feather="heart" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Nossos Valores</h3>
+                        <p class="text-gray-600">Qualidade, inovação, transparência e compromisso com o sucesso dos nossos clientes são os pilares da nossa empresa.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2">+<span id="years-counter">0</span></div>
+                    <div class="text-gray-600">Anos de Experiência</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2">+<span id="projects-counter">0</span></div>
+                    <div class="text-gray-600">Projetos Concluídos</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-2">+<span id="clients-counter">0</span></div>
+                    <div class="text-gray-600">Clientes Satisfeitos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-heading text-primary">Nossas Soluções</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transform animate-fade-in-up">
+                    <div class="h-48 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');">
+                        <div class="absolute inset-0 bg-primary/60"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="monitor" class="w-16 h-16 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Websites Profissionais</h3>
+                        <p class="text-gray-600 mb-4">Sites responsivos, modernos e otimizados para converter visitantes em clientes.</p>
+<button onclick="openServiceModal('websites')" class="text-secondary font-medium inline-flex items-center group">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-all duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 hover:-rotate-1 transform animate-fade-in-up animation-delay-200">
+                    <div class="h-48 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80');">
+                        <div class="absolute inset-0 bg-primary/60"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="smartphone" class="w-16 h-16 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Apps Mobile</h3>
+                        <p class="text-gray-600 mb-4">Aplicativos nativos e híbridos para iOS e Android com experiência excepcional.</p>
+                        <button onclick="openServiceModal('mobile')" class="text-secondary font-medium inline-flex items-center group">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-all duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transform animate-fade-in-up animation-delay-400">
+                    <div class="h-48 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80');">
+                        <div class="absolute inset-0 bg-primary/60"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="message-square" class="w-16 h-16 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">IA para WhatsApp</h3>
+                        <p class="text-gray-600 mb-4">Chatbots inteligentes e automação para WhatsApp Business com IA avançada.</p>
+                        <button onclick="openServiceModal('whatsapp')" class="text-secondary font-medium inline-flex items-center group">
+                            Saiba mais 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-all duration-300"></i>
+                        </button>
+                    </div>
+                </div> 
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6 font-heading text-primary">Projetos</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Conheça nossas soluções tecnológicas que transformaram negócios de diversos setores.</p>
+<div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="all">
+                        Todos
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="websites">
+                        Sites
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="mobile">
+                        Apps
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-300 bg-white hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-secondary focus:text-secondary" data-filter="whatsapp">
+                        IA
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Website Projects -->
+                <div class="project-item websites group cursor-pointer" data-category="websites" onclick="openProject('civetch')">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Civetch Angola" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Civetch Angola</h4>
+                            <p class="text-sm text-white/80">Website • Construção Civil</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Website</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item mobile group cursor-pointer" data-category="mobile">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="App E-commerce" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">App E-commerce</h4>
+                            <p class="text-sm text-white/80">Mobile • iOS/Android</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item whatsapp group cursor-pointer" data-category="whatsapp">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="ChatBot IA" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">ChatBot IA</h4>
+                            <p class="text-sm text-white/80">WhatsApp • Automação</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item websites group cursor-pointer" data-category="websites" onclick="openProject('analytics')">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dashboard Analytics" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Dashboard Analytics</h4>
+                            <p class="text-sm text-white/80">Website • SaaS</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Website</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item mobile group cursor-pointer" data-category="mobile">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="App Fitness" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">App Fitness</h4>
+                            <p class="text-sm text-white/80">Mobile • Saúde</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item websites group cursor-pointer" data-category="websites" onclick="openProject('login')">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Site de Futebol" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Site de Futebol</h4>
+                            <p class="text-sm text-white/80">Website • Desporto</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-medium">Website</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 font-heading text-primary">Entre em Contacto</h2>
+                    <p class="text-gray-600 mb-8">Estamos prontos para discutir seu projeto e responder a quaisquer perguntas que possa ter.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="map-pin" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">WhatsApp</h3>
+                                <p class="text-gray-600">+244 957 590 205</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="linkedin" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">LinkedIn</h3>
+                                <p class="text-gray-600">Q9 Technologies Angola</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i data-feather="mail" class="text-secondary w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Email</h3>
+                                <p class="text-gray-600">contato@q9tech.ao</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-lg font-medium mb-4 text-primary">Horário de Funcionamento</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Segunda - Sexta</span>
+                                <span class="font-medium">8:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sábado</span>
+                                <span class="font-medium">9:00 - 14:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Domingo</span>
+                                <span class="font-medium">Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form id="contactForm" class="bg-gray-50 p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Assunto</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all">
+                                <option value="budget">Consultoria Tecnológica</option>
+                                <option value="info">Suporte Técnico</option>
+                                <option value="careers">Desenvolvimento Sob Medida</option>
+<option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-primary px-6 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center">
+                            <span id="submit-text">Enviar Mensagem</span>
+                            <svg id="submit-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+                        
+                        <div id="form-success" class="mt-4 p-4 bg-green-100 text-green-700 rounded hidden">
+                            Obrigado — seu pedido foi enviado. Responderemos em até 24h úteis.
+                        </div>
+                        
+                        <div id="form-error" class="mt-4 p-4 bg-red-100 text-red-700 rounded hidden">
+                            Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Floating WhatsApp -->
+        <a href="https://wa.me/244957590205?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Q9%20Technologies" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-40">
+<i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="fixed bottom-8 left-8 bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-40">
+        <i data-feather="moon" class="w-6 h-6 hidden dark:block"></i>
+        <i data-feather="sun" class="w-6 h-6 block dark:hidden"></i>
+    </button>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
+                <i data-feather="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="p-8">
+                <h3 id="service-modal-title" class="text-3xl font-bold text-primary mb-4"></h3>
+                <p id="service-modal-description" class="text-gray-700 mb-6"></p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-primary mb-3">O que oferecemos:</h4>
+                        <ul id="service-modal-features" class="space-y-2">
+                            <!-- Features will be added here -->
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-primary mb-3">Tipos de projetos:</h4>
+                        <ul id="service-modal-types" class="space-y-2">
+                            <!-- Types will be added here -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="font-bold text-primary mb-3">Tecnologias utilizadas:</h4>
+                    <div id="service-modal-tech" class="flex flex-wrap gap-2">
+                        <!-- Tech badges will be added here -->
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="https://wa.me/244957590205?text=Olá, gostaria de saber mais sobre os serviços da Q9 Technologies" class="bg-secondary hover:bg-secondary/90 text-primary px-8 py-3 rounded-lg font-medium transition-all duration-300 inline-flex items-center">
+                        <i data-feather="message-circle" class="w-5 h-5 mr-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="components/animated-navbar.js"></script>
+<script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // ANIMAÇÕES AVANÇADAS
+        function initAdvancedAnimations() {
+            // Intersection Observer para animações de entrada
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observar seções
+            document.querySelectorAll('.section-animate').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Efeito parallax no mouse
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                document.querySelectorAll('.parallax-element').forEach(el => {
+                    const speed = el.dataset.speed || 0.5;
+                    const x = (mouseX - 0.5) * speed * 20;
+                    const y = (mouseY - 0.5) * speed * 20;
+                    el.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+            
+            // Menu mobile toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    // Adicionar lógica do menu mobile aqui
+                    console.log('Menu mobile clicado');
+                });
+            }
+        }
+        
+        // TEXTO DINÂMICO COM EFEITO DE DIGITAÇÃO
+        function initDynamicText() {
+            const titles = [
+                'Inovação Digital',
+                'Soluções Inteligentes', 
+                'Tecnologia Avançada',
+                'Futuro Conectado',
+                'Transformação Digital'
+            ];
+            
+            const titleElement = document.getElementById('dynamic-title');
+            let currentIndex = 0;
+            let isTyping = false;
+            
+            function typeWriter(text, callback) {
+                if (isTyping) return;
+                isTyping = true;
+                
+                titleElement.textContent = '';
+                titleElement.style.opacity = '1';
+                
+                let i = 0;
+                const typeInterval = setInterval(() => {
+                    if (i < text.length) {
+                        titleElement.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeInterval);
+                        isTyping = false;
+                        if (callback) callback();
+                    }
+                }, 100);
+            }
+            
+            function eraseText(callback) {
+                const currentText = titleElement.textContent;
+                let i = currentText.length;
+                
+                const eraseInterval = setInterval(() => {
+                    if (i > 0) {
+                        titleElement.textContent = currentText.substring(0, i - 1);
+                        i--;
+                    } else {
+                        clearInterval(eraseInterval);
+                        if (callback) callback();
+                    }
+                }, 50);
+            }
+            
+            function changeTitle() {
+                eraseText(() => {
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % titles.length;
+                        typeWriter(titles[currentIndex]);
+                    }, 300);
+                });
+            }
+            
+            // Iniciar com o primeiro título
+            typeWriter(titles[0]);
+            
+            // Mudar título a cada 4 segundos
+            setInterval(changeTitle, 4000);
+        }
+        
+        // EFEITOS DINÂMICOS EXTRAS
+        function addDynamicEffects() {
+            // Partículas flutuantes
+            createFloatingParticles();
+            
+            // Efeito de ondas no fundo
+            createWaveEffect();
+            
+            // Animação de pulso nos cards
+            addCardPulseEffect();
+        }
+        
+        function createFloatingParticles() {
+            const heroSection = document.querySelector('.hero-slide.active');
+            if (!heroSection) return;
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'floating-particle';
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 4 + 2}px;
+                    height: ${Math.random() * 4 + 2}px;
+                    background: rgba(217, 168, 75, ${Math.random() * 0.5 + 0.2});
+                    border-radius: 50%;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: float ${Math.random() * 10 + 10}s infinite linear;
+                    pointer-events: none;
+                `;
+                heroSection.appendChild(particle);
+            }
+        }
+        
+        function createWaveEffect() {
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0% { transform: translateY(0px) rotate(0deg); }
+                    33% { transform: translateY(-20px) rotate(120deg); }
+                    66% { transform: translateY(10px) rotate(240deg); }
+                    100% { transform: translateY(0px) rotate(360deg); }
+                }
+                
+                #camera-bg {
+                    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    will-change: transform, background-image;
+                }
+                
+                #smoke-cursor {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(217,168,75,0.3) 0%, rgba(217,168,75,0.1) 50%, transparent 100%);
+                    box-shadow: 0 0 20px rgba(217,168,75,0.4), 0 0 40px rgba(217,168,75,0.2);
+                    transition: opacity 0.3s ease;
+                    animation: ripple 2s infinite;
+                }
+                
+                @keyframes ripple {
+                    0% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: scale(1.5);
+                        opacity: 0.7;
+                    }
+                    100% {
+                        transform: scale(2);
+                        opacity: 0;
+                    }
+                }
+                
+                #smoke-cursor::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(217,168,75,0.2) 0%, transparent 70%);
+                    transform: translate(-50%, -50%);
+                    animation: ripple 2s infinite 0.5s;
+                }
+                
+                #smoke-cursor::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 150%;
+                    height: 150%;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(217,168,75,0.1) 0%, transparent 70%);
+                    transform: translate(-50%, -50%);
+                    animation: ripple 2s infinite 1s;
+                }
+                
+                .smoke-particle {
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+                    border-radius: 50%;
+                    animation: smokeFloat 1.5s ease-out forwards;
+                    pointer-events: none;
+                }
+                
+                @keyframes smokeFloat {
+                    0% { transform: translate(0, 0) scale(0.5); opacity: 0.8; }
+                    100% { transform: translate(var(--dx), var(--dy)) scale(2); opacity: 0; }
+                }
+                
+                /* Transições suaves entre seções */
+                section {
+                    transition: all 0.6s ease-in-out;
+                }
+                
+                a[href^="#"] {
+                    scroll-behavior: smooth;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // MOVIMENTO DE CÂMERA E CURSOR ÁGUA
+        function initMouseControlledMedia() {
+            const cameraBg = document.getElementById('camera-bg');
+            const smokeCursor = document.getElementById('smoke-cursor');
+            const heroSection = document.querySelector('section');
+            
+            const images = [
+                'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&q=75',
+                'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=75',
+                'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=75',
+                'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=75',
+                'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1920&q=75'
+            ];
+            
+            let currentImageIndex = 0;
+            
+            // Otimização para mobile
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Desabilitar efeitos pesados no mobile
+                cameraBg.style.willChange = 'auto';
+                
+                // Animação mais leve para mobile
+                let autoIndex = 0;
+                setInterval(() => {
+                    autoIndex = (autoIndex + 1) % images.length;
+                    cameraBg.style.backgroundImage = `url('${images[autoIndex]}')`;
+                }, 5000);
+            }
+            
+            // Movimento do cursor e câmera (desktop)
+            document.addEventListener('mousemove', (e) => {
+                // Cursor fumo
+                if (smokeCursor) {
+                    smokeCursor.style.left = e.clientX + 'px';
+                    smokeCursor.style.top = e.clientY + 'px';
+                    createSmokeParticle(e.clientX, e.clientY);
+                }
+                
+                // Movimento de câmera apenas no desktop
+                if (!isMobile && heroSection && (heroSection.contains(e.target) || e.target === heroSection)) {
+                    const rect = heroSection.getBoundingClientRect();
+                    const mouseX = (e.clientX - rect.left) / rect.width;
+                    const mouseY = (e.clientY - rect.top) / rect.height;
+                    
+                    // Movimento suave da câmera (parallax)
+                    const moveX = Math.max(-20, Math.min(20, (mouseX - 0.5) * 30));
+                    const moveY = Math.max(-15, Math.min(15, (mouseY - 0.5) * 20));
+                    const scale = Math.max(1.1, 1.15 + (mouseX * 0.03));
+                    
+                    cameraBg.style.transform = `scale(${scale}) translate(${moveX}px, ${moveY}px)`;
+                    
+                    // Trocar imagem baseado na posição
+                    const newImageIndex = Math.floor(mouseX * images.length);
+                    if (newImageIndex !== currentImageIndex && newImageIndex < images.length) {
+                        currentImageIndex = newImageIndex;
+                        cameraBg.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+                    }
+                }
+            });
+            
+            // Esconder cursor fumo quando sair da tela
+            document.addEventListener('mouseleave', () => {
+                if (smokeCursor) smokeCursor.style.opacity = '0';
+            });
+            
+            document.addEventListener('mouseenter', () => {
+                if (smokeCursor) smokeCursor.style.opacity = '1';
+            });
+            
+            function createSmokeParticle(x, y) {
+                if (Math.random() > 0.7) {
+                    const particle = document.createElement('div');
+                    particle.className = 'smoke-particle';
+                    particle.style.left = x + 'px';
+                    particle.style.top = y + 'px';
+                    particle.style.setProperty('--dx', (Math.random() - 0.5) * 40 + 'px');
+                    particle.style.setProperty('--dy', -Math.random() * 30 - 10 + 'px');
+                    document.body.appendChild(particle);
+                    
+                    setTimeout(() => particle.remove(), 1500);
+                }
+            }
+        }
+        
+        // Inicializar animações após o preloader
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const delay = isMobile ? 500 : 2000; // Carregamento mais rápido no mobile
+        
+        setTimeout(() => {
+            initAdvancedAnimations();
+            initDynamicText();
+            initMouseControlledMedia();
+        }, delay);
+        
+        // Preloader animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoPath = document.getElementById('logo-path');
+            const progressBar = document.getElementById('progress-bar');
+            const preloader = document.getElementById('preloader');
+            
+            // Animate logo drawing
+            setTimeout(() => {
+                logoPath.style.strokeDashoffset = 0;
+            }, 300);
+            
+            // Animate progress bar (mais rápido no mobile)
+            let progress = 0;
+            const increment = isMobile ? 5 : 2;
+            const speed = isMobile ? 15 : 30;
+            
+            const interval = setInterval(() => {
+                progress += increment;
+                progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        preloader.style.opacity = '0';
+                        setTimeout(() => {
+                            preloader.style.display = 'none';
+                            
+                            // Initialize animations after preloader
+                            if (typeof initAnimations === 'function') {
+                                initAnimations();
+                            }
+                        }, isMobile ? 200 : 500);
+                    }, isMobile ? 100 : 300);
+                }
+            }, speed);
+            
+            // Initialize counters
+            const yearsCounter = document.getElementById('years-counter');
+            const projectsCounter = document.getElementById('projects-counter');
+            const clientsCounter = document.getElementById('clients-counter');
+            
+            if (yearsCounter && projectsCounter && clientsCounter) {
+                animateCounter(yearsCounter, 0, 2, 2000);
+                animateCounter(projectsCounter, 0, 40, 2000);
+                animateCounter(clientsCounter, 0, 40, 2000);
+            }
+        });
+        
+        function animateCounter(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // MODAIS DE SERVIÇOS
+        function openServiceModal(service) {
+            const modal = document.getElementById('service-modal');
+            const title = document.getElementById('service-modal-title');
+            const description = document.getElementById('service-modal-description');
+            const features = document.getElementById('service-modal-features');
+            const types = document.getElementById('service-modal-types');
+            const tech = document.getElementById('service-modal-tech');
+            
+            const services = {
+                websites: {
+                    title: 'Websites Profissionais',
+                    description: 'Criamos sites modernos, responsivos e otimizados para todos os tipos de negócios. Desde landing pages até e-commerce completo.',
+                    features: ['Design responsivo', 'SEO otimizado', 'Velocidade de carregamento', 'Segurança SSL', 'Painel administrativo', 'Integração com redes sociais'],
+                    types: ['Sites institucionais', 'Lojas online (E-commerce)', 'Landing pages', 'Portfólios', 'Blogs corporativos', 'Sites informativos'],
+                    tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'WordPress', 'WooCommerce']
+                },
+                mobile: {
+                    title: 'Aplicativos Mobile',
+                    description: 'Desenvolvemos apps nativos e híbridos para iOS e Android com foco na experiência do usuário e performance.',
+                    features: ['Interface intuitiva', 'Performance otimizada', 'Notificações push', 'Integração com APIs', 'Modo offline', 'Atualizações automáticas'],
+                    types: ['Apps de negócios', 'E-commerce mobile', 'Apps educacionais', 'Redes sociais', 'Jogos casuais', 'Apps de produtividade'],
+                    tech: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'Node.js']
+                },
+                whatsapp: {
+                    title: 'IA para WhatsApp',
+                    description: 'Chatbots inteligentes e automação completa para WhatsApp Business, aumentando vendas e melhorando atendimento.',
+                    features: ['Respostas automáticas', 'IA conversacional', 'Integração com CRM', 'Análise de dados', 'Múltiplos atendentes', 'Campanhas automatizadas'],
+                    types: ['Atendimento ao cliente', 'Vendas automatizadas', 'Agendamentos', 'Suporte técnico', 'Marketing direto', 'Pesquisas de satisfação'],
+                    tech: ['WhatsApp API', 'OpenAI', 'Node.js', 'Python', 'MongoDB', 'Webhook']
+                }
+            };
+            
+            const serviceData = services[service];
+            title.textContent = serviceData.title;
+            description.textContent = serviceData.description;
+            
+            features.innerHTML = serviceData.features.map(f => `<li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>${f}</li>`).join('');
+            types.innerHTML = serviceData.types.map(t => `<li class="flex items-center"><i data-feather="arrow-right" class="w-4 h-4 text-secondary mr-2"></i>${t}</li>`).join('');
+            tech.innerHTML = serviceData.tech.map(t => `<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">${t}</span>`).join('');
+            
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            feather.replace();
+        }
+        
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+        
+        // PROJETOS
+        function openProject(projectId) {
+            if (projectId === 'civetch') {
+                window.open('CONSTRUCAO CIVIL/INdex.html', '_blank');
+            } else if (projectId === 'login') {
+                window.open('projecto login.html', '_blank');
+            } else if (projectId === 'analytics') {
+                window.open('index (1).html', '_blank');
+            }
+        }
+    </script>
+</body>
+</html>

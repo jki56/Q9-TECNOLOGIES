@@ -1,0 +1,85 @@
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Reduzir animações pesadas */
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    /* Otimizar hero section */
+    #camera-bg {
+        transform: scale(1.1) !important;
+        will-change: auto !important;
+    }
+    
+    /* Desabilitar efeitos de cursor no mobile */
+    #smoke-cursor {
+        display: none !important;
+    }
+    
+    .smoke-particle {
+        display: none !important;
+    }
+    
+    /* Melhorar performance de scroll */
+    body {
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+    }
+    
+    /* Otimizar imagens */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+    
+    /* Reduzir blur effects */
+    .backdrop-blur-sm {
+        backdrop-filter: none !important;
+        background-color: rgba(11, 35, 64, 0.9) !important;
+    }
+    
+    /* Simplificar gradientes */
+    .bg-gradient-to-br {
+        background: #0B2340 !important;
+    }
+    
+    /* Otimizar texto */
+    .text-4xl, .text-5xl, .text-6xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Melhorar touch targets */
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Reduzir sombras */
+    .shadow-lg, .shadow-xl, .shadow-2xl {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* Performance optimizations */
+.performance-optimized {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Smooth scrolling for mobile */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
